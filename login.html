@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - IELTS Dream</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-header">
+            <img src="assets/img/logo.png" alt="IELTS Dream" class="login-logo">
+            <h2>Welcome to IELTS Dream</h2>
+            <p>Enter your phone number to continue</p>
+        </div>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <div class="phone-input">
+                    <select id="countryCode">
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+61">🇦🇺 +61</option>
+                    </select>
+                    <input type="tel" id="phone" placeholder="9876543210" required>
+                </div>
+            </div>
+            
+            <button type="button" id="sendOtpBtn" class="login-btn">
+                <i class="fas fa-paper-plane"></i> Send OTP
+            </button>
+            
+            <div id="otpSection" class="hidden">
+                <div class="input-group">
+                    <label>Enter 6-digit OTP</label>
+                    <div class="otp-inputs">
+                        <input type="text" maxlength="1" pattern="\d*" inputmode="numeric">
+                        <input type="text" maxlength="1" pattern="\d*" inputmode="numeric">
+                        <input type="text" maxlength="1" pattern="\d*" inputmode="numeric">
+                        <input type="text" maxlength="1" pattern="\d*" inputmode="numeric">
+                        <input type="text" maxlength="1" pattern="\d*" inputmode="numeric">
+                        <input type="text" maxlength="1" pattern="\d*" inputmode="numeric">
+                    </div>
+                    <div class="timer" id="timer">00:30</div>
+                </div>
+                <button type="button" id="verifyBtn" class="login-btn">
+                    <i class="fas fa-check-circle"></i> Verify OTP
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>
